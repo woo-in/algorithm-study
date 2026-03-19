@@ -2,35 +2,36 @@ package cah;
 
 import java.util.*;
 import java.io.*;
-
-public class P1157_단어공부 {
     /*
-      문제 사항
-      - 알파벳 대소문자 미 구분 문자열 1줄 입력
-      - 가장 많이 나온 알파벳을 대문자로 출력
-      - 동일하게 가장 많이 나온다면 "?" 출력
+      문제 요약
+      - 문자열에서 가장 많이 등장한 알파벳 출력(대소문자 구분 X)
+      - 결과는 대문자로 출력
+      - 최댓값이 여러개라면 "?" 출력
 
-      성능 요구 사항
-      -  단어 길이: 최대 1,000,000
+      핵심 아이디어
+      - 모든 문자를 대문자로 변환 처리
+      - 알파벳 빈도를 배열(count[26])로 관리
+      - 최댓값을 찾으며 중복 여부 함께 체크
+
+      시간 복잡도: O(N)
      */
+public class P1157_단어공부 {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
 
-        // 알파벳 개수 저장할 배열
-        int[] count = new int[26];
+        int[] count = new int[26]; // A~Z까지 빈도 저장 배열
 
-        // 문자열 순회하며 알파벳 개수 카운트
+        // 알파벳 빈도 카운트
         for(int i = 0; i < s.length(); i++){
-            char c = Character.toUpperCase(s.charAt(i));
+            char c = Character.toUpperCase(s.charAt(i)); // 대문자로 통일
             count[c - 'A']++; // 해당 알파벳 위치의 카운트 증가
         }
 
-        // 최대 빈도수 찾기
-        int max = -1;
+        int max = -1; // 최대 빈도수
         char result = '?'; // 결과 문자, default는 '?'
 
-        // 배열 순회하며 최댓값과 중복 여부 확인
+        // 최댓값과 중복 여부 확인
         for(int i = 0; i < 26; i++){
             if(count[i] > max){
                 // 더 큰 최댓값 찾은 경우 갱신
@@ -41,6 +42,7 @@ public class P1157_단어공부 {
                 result = '?';
             }
         }
+
         System.out.println(result);
     }
 }
