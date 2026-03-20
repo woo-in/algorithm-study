@@ -3,7 +3,7 @@ package week01.session1;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class P1_1157_단어공부 {
+class P1_1157_단어공부 {
     public char solution(String input) {
         char answer = ' ';
         int max = Integer.MIN_VALUE;

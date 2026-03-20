@@ -3,7 +3,7 @@ package week01.session1;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class P3_1316_그룹단어체커 {
+class P3_1316_그룹단어체커 {
     public int solution(int n, String[] input) {
         int answer = 0;
 

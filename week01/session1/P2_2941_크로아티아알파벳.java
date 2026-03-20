@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class P2_2941_크로아티아알파벳 {
+class P2_2941_크로아티아알파벳 {
     public int solution(String input, ArrayList<String> ca) {
         int answer = 0;
         HashSet<String> hs = new HashSet<>(ca);
