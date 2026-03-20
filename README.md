@@ -87,7 +87,6 @@ week01-session01: add solutions
 ## 👥 Study Members
 
 - 전성훈
-- 김태희
 - 김혜빈
 - 정우인
 - 차아현
