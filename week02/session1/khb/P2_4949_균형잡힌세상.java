@@ -1,4 +1,4 @@
-package week02.session1;
+package week02.session1.khb;
 
 import java.io.BufferedReader;
 import java.io.IOException;
